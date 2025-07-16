@@ -1,363 +1,411 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Quantum Digitech Solutions - Computer & Electronics Experts in Vereeniging. We specialize in computer repairs, software installation, TV and cellphone repairs, accessories, smart TVs, gaming PCs, and more.">
-  <meta name="keywords" content="Quantum Digitech, Computer Repairs Vereeniging, TV Repairs, Laptop Repairs, Gaming Computers, Electronics Supplier, Website Development, CCTV Installation">
-  <meta name="author" content="Quantum Digitech Solutions Pty">
-  <title>Quantum Digitech Solutions Pty</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-  <style>
-    /* Custom styles for Swiper */
-    .swiper {
-      width: 100%;
-      height: 600px; /* Increased height for a more impactful hero section */
-    }
-    .swiper-slide img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    .swiper-slide {
-      position: relative;
-    }
-    .swiper-slide-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      color: white;
-      text-align: center;
-      padding: 20px;
-    }
-    .swiper-slide-overlay h2 {
-      font-size: 3rem; /* Larger heading */
-      font-weight: bold;
-      margin-bottom: 1rem;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    }
-    .swiper-slide-overlay p {
-      font-size: 1.5rem; /* Larger text */
-      margin-bottom: 2rem;
-      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
-    }
-    /* Smooth scroll for anchor links */
-    html {
-      scroll-behavior: smooth;
-    }
-
-    /* Mobile Menu Specific Styles */
-    @media (max-width: 767px) { /* Adjust breakpoint as needed, Tailwind's 'md' is 768px */
-      .nav-links {
-        display: none; /* Hide desktop menu by default on mobile */
-        flex-direction: column;
-        width: 100%;
-        background-color: #0b225a; /* Dark blue background */
-        position: absolute;
-        top: 64px; /* Height of the fixed nav bar */
-        left: 0;
-        padding: 1rem 0;
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-      }
-      .nav-links.active {
-        display: flex; /* Show menu when active */
-      }
-      .nav-links li {
-        text-align: center;
-        margin: 0.5rem 0;
-      }
-      .nav-links a {
-        display: block;
-        padding: 0.75rem 0;
-        color: white;
-        font-size: 1.125rem; /* text-lg */
-      }
-      .hamburger-button {
-        display: block; /* Show hamburger icon on mobile */
-      }
-    }
-    @media (min-width: 768px) {
-      .nav-links {
-        display: flex !important; /* Always show desktop menu on larger screens */
-      }
-      .hamburger-button {
-        display: none; /* Hide hamburger icon on desktop */
-      }
-    }
-  </style>
-</head>
-<body class="bg-gray-50 text-gray-900 font-sans">
-
-  <nav class="bg-blue-900 text-white shadow-lg p-4 flex justify-between items-center fixed w-full z-50 top-0">
-    <div class="flex items-center">
-      <img src="https://via.placeholder.com/40x40?text=Logo" alt="Quantum Digitech Solutions Logo" class="h-10 w-10 mr-3 rounded-full border-2 border-yellow-400">
-      <h1 class="text-2xl font-extrabold tracking-wide">Quantum Digitech Solutions</h1>
-    </div>
-
-    <button id="hamburger" class="hamburger-button text-white text-2xl focus:outline-none">
-      <i class="fas fa-bars"></i>
-    </button>
-
-    <ul id="nav-links" class="nav-links space-x-6 text-lg font-medium md:flex">
-      <li><a href="#home" class="hover:text-yellow-400 transition duration-300">Home</a></li>
-      <li><a href="#about" class="hover:text-yellow-400 transition duration-300">About</a></li>
-      <li><a href="#services" class="hover:text-yellow-400 transition duration-300">Services</a></li>
-      <li><a href="#contact" class="hover:text-yellow-400 transition duration-300">Contact</a></li>
-    </ul>
-  </nav>
-
-  <section id="home" class="pt-20">
-    <div class="swiper mySwiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <img src="images/q6.jpg" alt="Cutting-edge Technology Solutions">
-          <div class="swiper-slide-overlay">
-            <h2>Your Premier Tech Partner</h2>
-            <p>Unlocking innovation, one solution at a time.</p>
-            <a href="#services" class="bg-yellow-500 text-blue-900 px-8 py-3 rounded-full text-xl font-semibold hover:bg-yellow-400 transition duration-300 transform hover:scale-105">Explore Services</a>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <img src="images/q16.jpeg" alt="Expert Computer and Electronics Repairs">
-          <div class="swiper-slide-overlay">
-            <h2>Reliable Repairs, Exceptional Service</h2>
-            <p>Bringing your devices back to life with expertise.</p>
-            <a href="#contact" class="bg-yellow-500 text-blue-900 px-8 py-3 rounded-full text-xl font-semibold hover:bg-yellow-400 transition duration-300 transform hover:scale-105">Get a Quote</a>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <img src="images/q10.jpeg" alt="Custom Gaming PCs and IT Solutions">
-          <div class="swiper-slide-overlay">
-            <h2>Powering Your Digital World</h2>
-            <p>From custom builds to seamless IT solutions.</p>
-            <a href="#services" class="bg-yellow-500 text-blue-900 px-8 py-3 rounded-full text-xl font-semibold hover:bg-yellow-400 transition duration-300 transform hover:scale-105">Discover More</a>
-          </div>
-        </div>
-      </div>
-      <div class="swiper-pagination"></div>
-    </div>
-  </section>
-
-  <hr class="my-10 border-gray-200">
-
-  <section id="about" class="py-16 bg-gradient-to-r from-blue-900 to-blue-700 text-white">
-    <div class="max-w-5xl mx-auto px-6 text-center">
-      <h2 class="text-4xl font-extrabold mb-6">About Quantum Digitech Solutions</h2>
-      <p class="text-xl leading-relaxed">
-        <strong>Quantum Digitech Solutions Pty</strong>, proudly based in Vereeniging, stands at the forefront of the computer and electronics technology sector with over <strong>15 years of dedicated experience</strong>. We are committed to delivering top-tier services, specializing in comprehensive computer and laptop repairs, efficient TV and cellphone repairs, and expert hardware and software installations.
-      </p>
-      <p class="text-xl leading-relaxed mt-4">
-        Our passion for innovation extends to supplying cutting-edge Smart TVs and electronic household items, crafting high-performance custom gaming computers, pioneering website development, and ensuring your security with reliable CCTV installations. At Quantum Digitech, your complete tech solutions are found conveniently under one roof, backed by unparalleled expertise and customer satisfaction.
-      </p>
-    </div>
-  </section>
-
-  <hr class="my-10 border-gray-200">
-
-  <section id="services" class="py-16 bg-gray-50">
-    <div class="max-w-7xl mx-auto px-6">
-      <h2 class="text-4xl font-extrabold text-center mb-12 text-blue-900">Our Comprehensive Services</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 service-grid">
-
-        <div class="bg-white rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 flex flex-col overflow-hidden">
-          <img src="images/q4.jpg" alt="Computer and Laptop Repairs" class="w-full h-48 object-cover object-center rounded-t-lg">
-          <div class="p-6 flex-grow">
-            <h3 class="text-2xl font-bold mb-3 text-blue-800">Computer & Laptop Repairs</h3>
-            <p class="text-gray-700 leading-relaxed">Expert computer and laptop repairs to keep your devices running efficiently and reliably.</p>
-          </div>
-          <div class="p-6 border-t border-gray-100 bg-gray-50">
-            <a href="#contact" class="text-blue-600 hover:text-blue-800 font-semibold flex items-center justify-end">
-              Learn More <i class="fas fa-arrow-right ml-2"></i>
-            </a>
-          </div>
-        </div>
-
-        <div class="bg-white rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 flex flex-col overflow-hidden">
-          <img src="images/q14.jpeg" alt="Software and Hardware Installations" class="w-full h-48 object-cover object-center rounded-t-lg">
-          <div class="p-6 flex-grow">
-            <h3 class="text-2xl font-bold mb-3 text-blue-800">Software & Hardware Installations</h3>
-            <p class="text-gray-700 leading-relaxed">Professional hardware and software installations tailored to your specific needs for optimal performance.</p>
-          </div>
-          <div class="p-6 border-t border-gray-100 bg-gray-50">
-            <a href="#contact" class="text-blue-600 hover:text-blue-800 font-semibold flex items-center justify-end">
-              Learn More <i class="fas fa-arrow-right ml-2"></i>
-            </a>
-          </div>
-        </div>
-
-        <div class="bg-white rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 flex flex-col overflow-hidden">
-          <img src="images/q12.jpeg" alt="TV and Cellphone Repairs" class="w-full h-48 object-cover object-center rounded-t-lg">
-          <div class="p-6 flex-grow">
-            <h3 class="text-2xl font-bold mb-3 text-blue-800">TV & Cellphone Repairs</h3>
-            <p class="text-gray-700 leading-relaxed">Fast and efficient repairs for TVs and smartphones of all makes and models, restoring their functionality.</p>
-          </div>
-          <div class="p-6 border-t border-gray-100 bg-gray-50">
-            <a href="#contact" class="text-blue-600 hover:text-blue-800 font-semibold flex items-center justify-end">
-              Learn More <i class="fas fa-arrow-right ml-2"></i>
-            </a>
-          </div>
-        </div>
-
-        <div class="bg-white rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 flex flex-col overflow-hidden">
-          <img src="images/q16.jpeg" alt="Smart TVs and Electronic Household Items" class="w-full h-48 object-cover object-center rounded-t-lg">
-          <div class="p-6 flex-grow">
-            <h3 class="text-2xl font-bold mb-3 text-blue-800">Smart TV & Electronics Supply</h3>
-            <p class="text-gray-700 leading-relaxed">We supply a wide range of Smart TVs and quality household electronics at unbeatable prices.</p>
-          </div>
-          <div class="p-6 border-t border-gray-100 bg-gray-50">
-            <a href="#contact" class="text-blue-600 hover:text-blue-800 font-semibold flex items-center justify-end">
-              Learn More <i class="fas fa-arrow-right ml-2"></i>
-            </a>
-          </div>
-        </div>
-
-        <div class="bg-white rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 flex flex-col overflow-hidden">
-          <img src="images/web2.jpeg" alt="Custom Gaming PCs" class="w-full h-48 object-cover object-center rounded-t-lg">
-          <div class="p-6 flex-grow">
-            <h3 class="text-2xl font-bold mb-3 text-blue-800">Custom Gaming PCs</h3>
-            <p class="text-gray-700 leading-relaxed">Experience ultimate performance with our custom-built gaming computers, designed for enthusiasts.</p>
-          </div>
-          <div class="p-6 border-t border-gray-100 bg-gray-50">
-            <a href="#contact" class="text-blue-600 hover:text-blue-800 font-semibold flex items-center justify-end">
-              Learn More <i class="fas fa-arrow-right ml-2"></i>
-            </a>
-          </div>
-        </div>
-
-        <div class="bg-white rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 flex flex-col overflow-hidden">
-          <img src="images/q14.jpeg" alt="Cellphone and Computer Accessories" class="w-full h-48 object-cover object-center rounded-t-lg">
-          <div class="p-6 flex-grow">
-            <h3 class="text-2xl font-bold mb-3 text-blue-800">Cellphone & Computer Accessories</h3>
-            <p class="text-gray-700 leading-relaxed">We stock a wide variety of high-quality cellphone and computer accessories for all your digital needs.</p>
-          </div>
-          <div class="p-6 border-t border-gray-100 bg-gray-50">
-            <a href="#contact" class="text-blue-600 hover:text-blue-800 font-semibold flex items-center justify-end">
-              Learn More <i class="fas fa-arrow-right ml-2"></i>
-            </a>
-          </div>
-        </div>
-
-        <div class="bg-white rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 flex flex-col overflow-hidden">
-          <img src="images/cctv.webp" alt="CCTV Installation" class="w-full h-48 object-cover object-center rounded-t-lg">
-          <div class="p-6 flex-grow">
-            <h3 class="text-2xl font-bold mb-3 text-blue-800">CCTV Installation</h3>
-            <p class="text-gray-700 leading-relaxed">Ensure the security of your property 24/7 with our reliable and professional CCTV installation services.</p>
-          </div>
-          <div class="p-6 border-t border-gray-100 bg-gray-50">
-            <a href="#contact" class="text-blue-600 hover:text-blue-800 font-semibold flex items-center justify-end">
-              Learn More <i class="fas fa-arrow-right ml-2"></i>
-            </a>
-          </div>
-        </div>
-
-        <div class="bg-white rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 flex flex-col overflow-hidden">
-          <img src="images/web2.jpeg" alt="Website Development" class="w-full h-48 object-cover object-center rounded-t-lg">
-          <div class="p-6 flex-grow">
-            <h3 class="text-2xl font-bold mb-3 text-blue-800">Website Development</h3>
-            <p class="text-gray-700 leading-relaxed">Boost your digital presence with our professional website design and development solutions.</p>
-          </div>
-          <div class="p-6 border-t border-gray-100 bg-gray-50">
-            <a href="#contact" class="text-blue-600 hover:text-blue-800 font-semibold flex items-center justify-end">
-              Learn More <i class="fas fa-arrow-right ml-2"></i>
-            </a>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <hr class="my-10 border-gray-200">
-
-  <section id="contact" class="py-16 bg-gradient-to-r from-blue-700 to-blue-900 text-white">
-    <div class="max-w-4xl mx-auto px-6 text-center">
-      <h2 class="text-4xl font-extrabold mb-8">Get In Touch With Us</h2>
-      <p class="text-xl mb-6">Have a question or need assistance? Reach out to our expert team!</p>
-
-      <div class="bg-white text-gray-900 p-8 rounded-lg shadow-xl mb-8">
-        <p class="text-lg mb-4 flex items-center justify-center">
-          <i class="fas fa-map-marker-alt text-blue-600 mr-3 text-2xl"></i>
-          <span class="font-semibold">Visit Us:</span> 28 Kruger Avenue, Vereeniging
-        </p>
-        <p class="text-lg mb-4 flex items-center justify-center">
-          <i class="fas fa-phone-alt text-blue-600 mr-3 text-2xl"></i>
-          <span class="font-semibold">Call / WhatsApp:</span> <a href="tel:+27786809808" class="text-blue-800 hover:underline">078 680 9808</a>
-        </p>
-        <p class="text-lg mb-4 flex items-center justify-center">
-          <i class="fas fa-envelope text-blue-600 mr-3 text-2xl"></i>
-          <span class="font-semibold">Email Us:</span> <a href="mailto:quantumdigitech@gmail.com" class="text-blue-800 hover:underline">quantumdigitech@gmail.com</a>
-        </p>
-      </div>
-
-      <h3 class="text-3xl font-bold mb-6">Connect With Us On Social Media</h3>
-      <div class="flex justify-center gap-8 mt-6">
-        <a href="https://facebook.com" target="_blank" class="text-white hover:text-yellow-400 transition transform hover:scale-110 text-4xl" aria-label="Facebook">
-          <i class="fab fa-facebook-square"></i>
-        </a>
-        <a href="https://wa.me/27786809808" target="_blank" class="text-white hover:text-yellow-400 transition transform hover:scale-110 text-4xl" aria-label="WhatsApp">
-          <i class="fab fa-whatsapp-square"></i>
-        </a>
-        <a href="https://instagram.com" target="_blank" class="text-white hover:text-yellow-400 transition transform hover:scale-110 text-4xl" aria-label="Instagram">
-          <i class="fab fa-instagram-square"></i>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <hr class="my-10 border-gray-200">
-
-  <footer class="bg-blue-900 text-white text-center py-8">
-    <p class="text-lg">&copy; <span id="current-year"></span> Quantum Digitech Solutions Pty. All rights reserved.</p>
-    <p class="text-sm mt-2">Designed with passion by Quantum Digitech Solutions.</p>
-  </footer>
-
-  <script>
-    // Initialize Swiper
-    new Swiper(".mySwiper", {
-      loop: true,
-      autoplay: {
-        delay: 4000,
-        disableOnInteraction: false,
-      },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      effect: "fade", // Added fade effect for smoother transitions
-      fadeEffect: {
-        crossFade: true,
-      },
-    });
-
-    // Set current year in footer
-    document.getElementById("current-year").textContent = new Date().getFullYear();
-
-    // Mobile menu toggle functionality
-    const hamburger = document.getElementById('hamburger');
-    const navLinks = document.getElementById('nav-links');
-
-    hamburger.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
-    });
-
-    // Close menu when a link is clicked (for smoother navigation on mobile)
-    navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        if (navLinks.classList.contains('active')) {
-          navLinks.classList.remove('active');
+    <meta name="google-site-verification" content="MKpN8IW46GA5kwkZMgRtK1QKEtyFOYSc01i2ZXOvjoc" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elvis Wheels - Vanderbijlpark | Tyre & Rim Experts</title>
+    <meta name="description" content="Elvis Wheels in Vanderbijlpark offers expert tyre and rim services including balancing, welding, suspension, brakes, shocks, new & used tyres, rim polishing, PCD change, and diamond cut.">
+    <meta name="keywords" content="Elvis Wheels, Vanderbijlpark, tyre repair, rim services, wheel balancing, aluminium welding, suspension repair, brake pad replacement, shock replacement, used tyres, new tyres, rim polishing, PCD change, diamond cut">
+    <meta name="author" content="Elvis Wheels">
+    <meta property="og:title" content="Elvis Wheels - Tyre & Rim Experts in Vanderbijlpark">
+    <meta property="og:description" content="Visit Elvis Wheels in Vanderbijlpark for top-quality tyre and rim services. Two branches ready to serve you!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://elviswheels.co.za">
+    <meta property="og:image" content="images/wheels1.jpg">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        /* Custom styles for Swiper */
+        .swiper {
+            width: 100%;
+            height: 550px; /* Adjusted height for hero section */
         }
-      });
-    });
-  </script>
+        .swiper-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+        .swiper-slide {
+            position: relative;
+        }
+        .swiper-slide-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6); /* Darker overlay for text readability */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        .swiper-slide-overlay h2 {
+            font-size: 3.5rem; /* Larger heading */
+            font-weight: bold;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
+        }
+        .swiper-slide-overlay p {
+            font-size: 1.8rem; /* Larger text */
+            margin-bottom: 2.5rem;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.9);
+            max-width: 800px; /* Constrain text width */
+        }
+
+        /* Smooth scroll for anchor links */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Mobile Menu Specific Styles */
+        @media (max-width: 767px) { /* Applies to mobile devices */
+            .nav-links {
+                display: none; /* Hide desktop menu by default on mobile */
+                flex-direction: column;
+                width: 100%;
+                background-color: #0d2b63; /* Slightly lighter blue than nav for contrast */
+                position: absolute;
+                top: 64px; /* Height of the fixed nav bar */
+                left: 0;
+                padding: 1rem 0;
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            }
+            .nav-links.active {
+                display: flex; /* Show menu when active */
+            }
+            .nav-links li {
+                text-align: center;
+                margin: 0.75rem 0; /* More vertical spacing */
+            }
+            .nav-links a {
+                display: block;
+                padding: 0.75rem 0;
+                color: white;
+                font-size: 1.125rem; /* text-lg */
+            }
+            .hamburger-button {
+                display: block; /* Show hamburger icon on mobile */
+            }
+            .fixed-nav {
+                height: 64px; /* Ensure consistent height */
+            }
+            .hero-section {
+                padding-top: 64px; /* Adjust padding for fixed nav on mobile */
+            }
+            .swiper-slide-overlay h2 {
+                font-size: 2.2rem; /* Adjust for smaller screens */
+            }
+            .swiper-slide-overlay p {
+                font-size: 1.1rem; /* Adjust for smaller screens */
+            }
+        }
+        @media (min-width: 768px) { /* Applies to tablets and desktops */
+            .nav-links {
+                display: flex !important; /* Always show desktop menu on larger screens */
+            }
+            .hamburger-button {
+                display: none; /* Hide hamburger icon on desktop */
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-blue-900 font-sans">
+
+    <nav class="bg-blue-900 text-white shadow-lg p-4 flex justify-between items-center fixed w-full z-50 top-0 fixed-nav">
+        <div class="flex items-center">
+            <img src="https://via.placeholder.com/40x40?text=Logo" alt="Elvis Wheels Logo" class="h-10 w-10 mr-3 rounded-full border-2 border-red-500">
+            <h1 class="text-2xl font-extrabold tracking-wide">Elvis Wheels</h1>
+        </div>
+
+        <button id="hamburger" class="hamburger-button text-white text-2xl focus:outline-none md:hidden">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <ul id="nav-links" class="nav-links space-x-6 text-lg font-medium md:flex">
+            <li><a href="#home" class="hover:text-red-500 transition duration-300">Home</a></li>
+            <li><a href="#about" class="hover:text-red-500 transition duration-300">About</a></li>
+            <li><a href="#services" class="hover:text-red-500 transition duration-300">Services</a></li>
+            <li><a href="details.html" class="hover:text-red-500 transition duration-300">Gallery</a></li>
+            <li><a href="contacts.html" class="hover:text-red-500 transition duration-300">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="home" class="pt-16 hero-section">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="images/el28.jpg" alt="High-Performance Wheels">
+                    <div class="swiper-slide-overlay">
+                        <h2>Quality Tyres & Rims in Vanderbijlpark</h2>
+                        <p>Your trusted experts for all your wheel and tyre needs.</p>
+                        <a href="#services" class="bg-red-600 text-white px-8 py-3 rounded-full text-xl font-semibold hover:bg-red-700 transition duration-300 transform hover:scale-105">Explore Our Services</a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/el19.jpg" alt="Expert Tyre Services">
+                    <div class="swiper-slide-overlay">
+                        <h2>Precision & Reliability You Can Trust</h2>
+                        <p>Over a decade of experience ensuring your safety on the road.</p>
+                        <a href="#contact" class="bg-red-600 text-white px-8 py-3 rounded-full text-xl font-semibold hover:bg-red-700 transition duration-300 transform hover:scale-105">Find Our Branches</a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/el46.jpg" alt="Custom Rim Work">
+                    <div class="swiper-slide-overlay">
+                        <h2>Beyond Tyres: Custom Rim Solutions</h2>
+                        <p>From polishing to diamond cuts, we make your rims shine.</p>
+                        <a href="details.html" class="bg-red-600 text-white px-8 py-3 rounded-full text-xl font-semibold hover:bg-red-700 transition duration-300 transform hover:scale-105">View Our Gallery</a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <hr class="my-10 border-gray-200">
+
+    <section id="about" class="py-16 bg-gradient-to-r from-blue-900 to-blue-700 text-white">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <h2 class="text-4xl font-extrabold mb-6">About Elvis Wheels</h2>
+            <p class="text-xl leading-relaxed">
+                Elvis Wheels, based in Vanderbijlpark, has been offering **excellent and reliable tyre and rim services for over ten years**. With two well-established branches, we specialize in:
+            </p>
+            <ul class="text-xl leading-relaxed mt-4 list-disc list-inside space-y-2">
+                <li>Wheel balancing and alignment</li>
+                <li>Professional aluminium welding for cracked or broken wheels</li>
+                <li>Comprehensive suspension work, brake pad replacement, and shock replacement</li>
+                <li>Supply of both new and **affordable used tyres** (from R499 for used, R799 for new)</li>
+                <li>Expert rim repairs, meticulous rim polishing, and precise PCD hole changes</li>
+                <li>**Precision diamond cutting** to give your rims a unique, stunning finish</li>
+            </ul>
+            <p class="text-xl leading-relaxed mt-4">
+                Our **commitment to quality, safety, and customer satisfaction** sets us apart in the industry. Drive in today and experience the Elvis Wheels difference!
+            </p>
+        </div>
+    </section>
+
+    <hr class="my-10 border-gray-200">
+
+    <section id="services" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl font-extrabold text-center mb-12 text-blue-900">Our Comprehensive Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10">
+
+                <div class="bg-white rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 flex flex-col overflow-hidden">
+                    <img src="images/el5.jpg" alt="Wheel Balancing Service" class="w-full h-48 object-cover object-center rounded-t-lg">
+                    <div class="p-6 flex-grow">
+                        <h3 class="text-2xl font-bold mb-3 text-blue-800">Wheel Balancing</h3>
+                        <p class="text-gray-700 leading-relaxed">We ensure your wheels are perfectly balanced for a smooth, stable, and safe ride.</p>
+                    </div>
+                    <div class="p-6 border-t border-gray-100 bg-gray-50">
+                        <a href="#contact" class="text-red-600 hover:text-red-800 font-semibold flex items-center justify-end">
+                            Book Now <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 flex flex-col overflow-hidden">
+                    <img src="images/el31.jpg" alt="Aluminium Welding for Rims" class="w-full h-48 object-cover object-center rounded-t-lg">
+                    <div class="p-6 flex-grow">
+                        <h3 class="text-2xl font-bold mb-3 text-blue-800">Aluminium Welding</h3>
+                        <p class="text-gray-700 leading-relaxed">Professional aluminium welding for cracked or broken wheels, restoring strength and appearance.</p>
+                    </div>
+                    <div class="p-6 border-t border-gray-100 bg-gray-50">
+                        <a href="#contact" class="text-red-600 hover:text-red-800 font-semibold flex items-center justify-end">
+                            Get a Quote <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 flex flex-col overflow-hidden">
+                    <img src="images/el41.jpeg" alt="Suspension Repair and Upgrades" class="w-full h-48 object-cover object-center rounded-t-lg">
+                    <div class="p-6 flex-grow">
+                        <h3 class="text-2xl font-bold mb-3 text-blue-800">Suspension Repairs</h3>
+                        <p class="text-gray-700 leading-relaxed">Reliable suspension repairs and upgrades to improve your vehicle's handling and comfort.</p>
+                    </div>
+                    <div class="p-6 border-t border-gray-100 bg-gray-50">
+                        <a href="#contact" class="text-red-600 hover:text-red-800 font-semibold flex items-center justify-end">
+                            Enquire Now <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 flex flex-col overflow-hidden">
+                    <img src="images/el43.jpeg" alt="Brake Pad Replacement Service" class="w-full h-48 object-cover object-center rounded-t-lg">
+                    <div class="p-6 flex-grow">
+                        <h3 class="text-2xl font-bold mb-3 text-blue-800">Brake Pad Replacement</h3>
+                        <p class="text-gray-700 leading-relaxed">Brake pad replacement services to keep your vehicle safe and responsive on the road.</p>
+                    </div>
+                    <div class="p-6 border-t border-gray-100 bg-gray-50">
+                        <a href="#contact" class="text-red-600 hover:text-red-800 font-semibold flex items-center justify-end">
+                            Service My Brakes <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 flex flex-col overflow-hidden">
+                    <img src="images/el40.jpeg" alt="Shock Replacement" class="w-full h-48 object-cover object-center rounded-t-lg">
+                    <div class="p-6 flex-grow">
+                        <h3 class="text-2xl font-bold mb-3 text-blue-800">Shock Replacement</h3>
+                        <p class="text-gray-700 leading-relaxed">We replace worn shocks to improve ride comfort and overall vehicle control.</p>
+                    </div>
+                    <div class="p-6 border-t border-gray-100 bg-gray-50">
+                        <a href="#contact" class="text-red-600 hover:text-red-800 font-semibold flex items-center justify-end">
+                            Replace Shocks <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 flex flex-col overflow-hidden">
+                    <img src="images/el23.jpg" alt="New and Used Tyres for Sale" class="w-full h-48 object-cover object-center rounded-t-lg">
+                    <div class="p-6 flex-grow">
+                        <h3 class="text-2xl font-bold mb-3 text-blue-800">New & Used Tyres</h3>
+                        <p class="text-gray-700 leading-relaxed">We supply both new and used tyres to fit your budget and performance needs. Used tyres from R499, new from R799.</p>
+                    </div>
+                    <div class="p-6 border-t border-gray-100 bg-gray-50">
+                        <a href="#contact" class="text-red-600 hover:text-red-800 font-semibold flex items-center justify-end">
+                            View Stock <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 flex flex-col overflow-hidden">
+                    <img src="images/el45.jpg" alt="Rim Repair Services" class="w-full h-48 object-cover object-center rounded-t-lg">
+                    <div class="p-6 flex-grow">
+                        <h3 class="text-2xl font-bold mb-3 text-blue-800">Rim Repairs</h3>
+                        <p class="text-gray-700 leading-relaxed">Restore your damaged rims to their original look and performance with our expert repair services.</p>
+                    </div>
+                    <div class="p-6 border-t border-gray-100 bg-gray-50">
+                        <a href="#contact" class="text-red-600 hover:text-red-800 font-semibold flex items-center justify-end">
+                            Repair My Rims <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 flex flex-col overflow-hidden">
+                    <img src="images/el48.jpg" alt="Rim Polishing Service" class="w-full h-48 object-cover object-center rounded-t-lg">
+                    <div class="p-6 flex-grow">
+                        <h3 class="text-2xl font-bold mb-3 text-blue-800">Rim Polishing</h3>
+                        <p class="text-gray-700 leading-relaxed">Give your rims a brand-new, mirror-like shine with our professional rim polishing service.</p>
+                    </div>
+                    <div class="p-6 border-t border-gray-100 bg-gray-50">
+                        <a href="#contact" class="text-red-600 hover:text-red-800 font-semibold flex items-center justify-end">
+                            Polish My Rims <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 flex flex-col overflow-hidden">
+                    <img src="images/el28.jpg" alt="PCD Change and Diamond Cut Rims" class="w-full h-48 object-cover object-center rounded-t-lg">
+                    <div class="p-6 flex-grow">
+                        <h3 class="text-2xl font-bold mb-3 text-blue-800">PCD Change & Diamond Cut</h3>
+                        <p class="text-gray-700 leading-relaxed">We offer PCD changes (e.g., 4 to 5 holes) for compatibility and precision diamond cutting for a unique, enhanced finish.</p>
+                    </div>
+                    <div class="p-6 border-t border-gray-100 bg-gray-50">
+                        <a href="#contact" class="text-red-600 hover:text-red-800 font-semibold flex items-center justify-end">
+                            Customize Rims <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <hr class="my-10 border-gray-200">
+
+    <section id="contact" class="py-16 bg-gradient-to-r from-blue-700 to-blue-900 text-white">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-4xl font-extrabold mb-8">Get In Touch With Us</h2>
+            <p class="text-xl mb-6">Visit one of our two convenient branches in Vanderbijlpark or contact us directly.</p>
+
+            <div class="bg-white text-gray-900 p-8 rounded-lg shadow-xl mb-8">
+                <p class="text-lg mb-4 flex flex-col md:flex-row items-center justify-center">
+                    <i class="fas fa-map-marker-alt text-blue-600 mr-0 md:mr-3 mb-2 md:mb-0 text-2xl"></i>
+                    <span class="font-semibold">Branch 1:</span> 132 Hans Strydom Street, Vanderbijlpark
+                </p>
+                <div class="w-full h-64 mb-6 rounded-lg overflow-hidden">
+                    <iframe class="w-full h-full" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14138.834024340578!2d27.848888!3d-26.702914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e956e1b7f2f1111%3A0x86b0b0b0b0b0b0b0!2s132%20Hans%20Strydom%20St%2C%20Vanderbijlpark%20SE%202%2C%20Vanderbijlpark%2C%201911%2C%20South%20Africa!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+                <p class="text-lg mb-4 flex flex-col md:flex-row items-center justify-center">
+                    <i class="fas fa-map-marker-alt text-blue-600 mr-0 md:mr-3 mb-2 md:mb-0 text-2xl"></i>
+                    <span class="font-semibold">Branch 2:</span> 17 Avenga Street, Klassie, Vanderbijlpark
+                </p>
+                <div class="w-full h-64 mb-6 rounded-lg overflow-hidden">
+                    <iframe class="w-full h-full" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14138.834024340578!2d27.848888!3d-26.702914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e956e1b7f2f1111%3A0x86b0b0b0b0b0b0b0!2s17%20Avenga%20St%2C%20Klassie%2C%20Vanderbijlpark%2C%201900%2C%20South%20Africa!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+                <p class="text-lg mb-4 flex items-center justify-center">
+                    <i class="fas fa-phone-alt text-blue-600 mr-3 text-2xl"></i>
+                    <span class="font-semibold">Call Us:</span> <a href="tel:+27630800169" class="text-blue-800 hover:underline">063 080 0169</a>
+                </p>
+            </div>
+
+            <h3 class="text-3xl font-bold mb-6">Connect With Us</h3>
+            <div class="flex justify-center gap-8 mt-6">
+                <a href="https://facebook.com" target="_blank" class="text-white hover:text-red-500 transition transform hover:scale-110 text-4xl" aria-label="Facebook">
+                    <i class="fab fa-facebook-square"></i>
+                </a>
+                <a href="https://wa.me/27780444213" target="_blank" class="text-white hover:text-red-500 transition transform hover:scale-110 text-4xl" aria-label="WhatsApp">
+                    <i class="fab fa-whatsapp-square"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <hr class="my-10 border-gray-200">
+
+    <footer class="bg-blue-900 text-white text-center py-8">
+        <p class="text-lg">&copy; <span id="current-year"></span> Elvis Wheels. All rights reserved.</p>
+        <p class="text-sm mt-2">Crafted with passion for the road.</p>
+    </footer>
+
+    <script>
+        // Initialize Swiper
+        new Swiper(".mySwiper", {
+            loop: true,
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            effect: "fade", // Added fade effect for smoother transitions
+            fadeEffect: {
+                crossFade: true,
+            },
+        });
+
+        // Set current year in footer
+        document.getElementById("current-year").textContent = new Date().getFullYear();
+
+        // Mobile menu toggle functionality
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu when a link is clicked (for smoother navigation on mobile)
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
