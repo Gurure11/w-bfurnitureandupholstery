@@ -1,288 +1,117 @@
+Copy
 <!DOCTYPE html>
-<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>A & R FURNITURE & UPHOLSTERY</title>
-	<meta name="description" content="A & R Furniture">
-	<meta name="keywords" content="recliner couches for sale, couches , upholstery in vereening, sofa replacement, leather couches in vereening, dining chairs ">
-	
-	<head>
-    <link rel="canonical" href="https://www.aruphostery-furniture.co.za/">
-		<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "A & R Upholstery",
-  "name": "A & R Uphostry & Furniture",
-  "url": "https://www.aruphostery-furniture.co.za",
-  "logo": "https://www.aruphostery-furniture.co.za/logo.jpg",
-  "description": "Uphostery & Furniture Manufacturers. Recliner couches suppliers"
-}
-</script>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Quantum Digitech Solutions - Computer & Electronics Experts in Vereeniging">
+  <title>Quantum Digitech Solutions Pty</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <style>
+    .swiper { width: 100%; height: 70vh; max-height: 800px; }
+    .swiper-slide {
+      position: relative;
+      background: linear-gradient(45deg, rgba(0,0,0,0.7), rgba(0,0,0,0.3));
+    }
+    .swiper-slide img { 
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      mix-blend-mode: multiply;
+    }
+    .service-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    }
+  </style>
 </head>
+<body class="bg-gray-50 text-gray-900">
+  <!-- Gradient Navigation -->
+  <nav class="bg-gradient-to-r from-blue-800 to-blue-900 text-white sticky top-0 z-50 shadow-xl">
+    <div class="container mx-auto px-4 py-3 flex flex-col md:flex-row justify-between items-center">
+      <h1 class="text-2xl font-bold mb-2 md:mb-0">Quantum Digitech</h1>
+      <ul class="flex space-x-6 font-medium">
+        <li><a href="#home" class="hover:text-yellow-400 transition-colors">Home</a></li>
+        <li><a href="#services" class="hover:text-yellow-400 transition-colors">Services</a></li>
+        <li><a href="#about" class="hover:text-yellow-400 transition-colors">About</a></li>
+        <li><a href="#contact" class="hover:text-yellow-400 transition-colors">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
 
-	<style type="text/css">
-		*{
-			padding: 0;
-			margin: 0;
-			text-decoration: none;
-			list-style: none;
-			box-sizing: border-box;
-		}
-		nav{
-			background: black;
-			height: 80px;
-			width: 100%;
-		}
-		#main-head{
-			font-size: 30px;
-			color: white;
-			line-height: 80px;
-			background-size: cover;
-			display: inline-block;
-			margin-bottom: 0px;
-			text-align: float left;
-			margin-right: 20px;
+  <!-- Hero Section -->
+  <section id="home" class="relative">
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="images/q6.jpg" alt="Tech Solutions">
+          <div class="absolute bottom-10 left-10 text-white max-w-2xl">
+            <h2 class="text-4xl font-bold mb-4">Premium Tech Solutions</h2>
+            <p class="text-xl">Your trusted partner in digital innovation and electronics repair</p>
+          </div>
+        </div>
+        <!-- Add other slides with similar structure -->
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
 
+  <!-- Services Grid -->
+  <section id="services" class="py-16 px-4">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-4xl font-bold text-center mb-12">Our Services</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Service Card 1 -->
+        <div class="service-card bg-white rounded-xl overflow-hidden shadow-lg">
+          <div class="aspect-square">
+            <img src="images/q4.jpg" alt="Repairs" class="w-full h-full object-cover">
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Device Repairs</h3>
+            <p class="text-gray-600">Expert repairs for computers, laptops, and mobile devices</p>
+          </div>
+        </div>
 
-		}
-		nav ul{
-			float: right;
-			margin-right: 20px;
+        <!-- Repeat for other services with consistent structure -->
+        <!-- Add 7 more service cards following the same pattern -->
+        
+      </div>
+    </div>
+  </section>
 
-		}
-		nav ul li{
-			display: inline-block;
-			line-height: 80px;
-			margin: 0 5px;
-			position: relative;
+  <!-- Contact Section -->
+  <section id="contact" class="py-16 bg-blue-900 text-white">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-4xl font-bold mb-8">Get in Touch</h2>
+      <div class="grid md:grid-cols-2 gap-8 text-left">
+        <div>
+          <p class="text-xl mb-4">📍 28 Kruger Avenue, Vereeniging</p>
+          <p class="text-xl mb-4">📞 <a href="tel:+27786809808" class="hover:text-yellow-400">078 680 9808</a></p>
+          <p class="text-xl">📧 <a href="mailto:quantumdigitech@gmail.com" class="hover:text-yellow-400">quantumdigitech@gmail.com</a></p>
+        </div>
+        <div class="flex justify-center items-center gap-6">
+          <a href="https://wa.me/27786809808" class="text-4xl hover:text-yellow-400 transition-colors">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+          <!-- Add other social links -->
+        </div>
+      </div>
+    </div>
+  </section>
 
-		}
-		nav ul li a{
-			color: white;
-			font-size: 20px;
-			text-transform: uppercase;
-			padding: 7px 13px;
-			border-radius: 3px;
-			display: inline-block;
-					
-			}
-			a.active,a:hover{
-				color: white;
-				transition: 0.15s;
-				
-
-			}
-			.checkbtn{
-				font-size: 30px;
-				color: white;
-				float: right;
-				line-height: 80px;
-				margin-right: 40px;
-				cursor: pointer;
-				display: none;
-			}
-			#check{
-				display: none;
-			}
-			
-			nav ul li a:hover{
-				color: white;
-				display: inline-block;
-				background-color: green;
-				padding: 5px;
-				padding-top: 5px;
-				padding-bottom: 5px;
-				transition: 0.15s;
-				opacity: 0.5;
-			}
-			#body-main{
-				background-image: url(images/good.jpg);
-				background-size: cover;
-			}
-			#tribe{
-				color: white;
-				margin-right: 10px;
-			}
-			#facebook{
-				width: 30px;
-				border-radius: 7px;
-				margin-right: 10px;
-				margin-left: 30px;
-			}
-			#instagram{
-				width: 20px;
-				border-radius: 5px;
-			}
-			#tribe:hover{
-				color: blue;
-				background-color: white;
-				cursor: pointer;
-			}
-		
-		a:hover{
-			color: red;
-			background-color: green,
-			cursor: pointer;
-			opacity: 0.6;
-			transition: 0.17s;
-		}
-		#container{
-			width: 100%;
-			min-height: 100vh;
-			padding: 5%;
-			background-image: url(images/search);
-			background-position: center;
-			background-size: cover;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-		}
-		.slider-frame{
-		overflow: hidden;
-		width: 800px;
-		margin-left: 400px;
-		margin-top: 20px;
-		height: 700px;
-		margin-left: 360px;
-		margin-top: 20px;
-
-	}
-	#j{
-		width: 800px;
-		border-radius: 5px;
-	}
-	#k{
-		width: 800px;
-		border-radius: 5px;
-	}
-	#l{
-		width: 800px;
-		border-radius: 5px;
-	}
-
-	@-webkit-keyframes slide_animation{
-		0% {left:0px;}
-		10% {left:0px;}
-		20% {left:800px;}
-		30% {left:800px;}
-		40% {left:1600px;}
-		50% {left:1600px;}
-		60% {left:800px;}
-		70% {left:800px;}
-		80% {left:0px;}	
-		90% {left:0px;}
-		100% {left:0px;}
-		
-	}
-	.slide-images{
-		width: 800px;
-		margin: 0 0 0 -800px;
-		position: relative;
-		-webkit-animation-name: slide_animation;
-		-webkit-animation-duration: 20s;
-		-webkit-animation-iteration-count: infinite;
-		-webkit-animation-direction: alternate;
-		-webkit-animation-play-state: running;
-	}
-	.image-container{
-		width: 900px;
-		position: relative;
-		float: left;
-		height: 800px;
-	}
-	.fit-screen{
-		height: 100dvh;
-		
-	}	
-	h5{ color: white;
-	font-size: 20px; 
-}
-#chain{
-	width: 100px;
-	border-radius: 50px;
-	display: inline-block;
-	
-
-
-}
-h4{
-	color: white;
-	text-align: center;
-}
-p{
-	color: black;
-	text-align: center;
-}
-#whats{
-	width: 30px;
-	border-radius: 7px;
-	margin-right: 10px;
-}	
-h5{
-	color: white;
-	margin-left: 30px;
-}		
-	</style>
-	<link rel="stylesheet" type="text/css" href="http://kit.fontawesome.com/a076d05399">
-</head>
-
-<br>
-<body id="body-main">
-	<div class="fit-screen">
-	 <img id="chain" src="images/va.png"><h1 id="main-head">A & R FURNITURE & UPHOLSTERY </h1>
-	<br>
-	<nav>
-<h5></h5>
-		
-	<a href="https://web.facebook.com/profile.php?id=61553676149453"><img id="facebook" src="images/facebook.jpg" target="_blank"></a>
-	<a href="https://api.whatsapp.com/send?phone=%2B27792188143&data=ARArWsDNitpWZheDda1cy78LTY1BSsjPn6c5_YJ492M1sTHf3qNvD9NDIKQxi_jQQN-PvMdjncOxTtlHWB-y1_5s_Igx-9PST05H4AMjusDB4CCMF_-stHU1mlAIxp1cleMGK6mV5_FgCKuf0aYLcvM4Vw&source=FB_Page&app=facebook&entry_point=page_cta&fbclid=IwAR35dsDp1hRv3XR7CKfl_JQFM9sFJfqnGRnaL3AUPwHv1xIcT_6wOcCfSX0"><img id="whats" src="images/whats.jpeg"></a>
-	 	
-		<ul>
-		<li><a class="active" href="index.html">HOME</a></li>
-		<li><a href="details.html">COUCHES</a></li>
-		<li><a href="carseats.html">CAR SEATS</a></li>
-		<li><a href="curtains.html">CURTAINS</a></li>
-		<li><a href="contacts.html">Contacts</a></li>
-	</ul>
-	</nav>
-	<br>
-		<h5>+27 79 218 8143</h5>
-	<br>
-
-	<div class="slider-frame">
-	<div class="slide-images">
-		
-			
-			<div class="img-container">
-				<img  src="images/he.jpeg">
-				
-			</div>
-
-			<div class="img-container">
-				<img  src="">
-				
-			</div>
-			
-	</div>
-</div>
-	
-</div>
-	<br>
-	<br>
-
-	<br>
-	<br> 
-	<br>
-	<br>
-	<br>
-	<h4>Our Expertise</h4><br>
-
-<p>What sets us apart is our dedication to excellence. Each piece of furniture is meticulously crafted by skilled artisans, ensuring both <br>durability and sophistication. From classic designs to modern innovations, our collection embodies the fusion of comfort and aesthetic <br>appeal.</p>
-	<br>
-	<h4>Our Services</h4><br>
-	<p>We do deliveries for customers around Vaal and Vereening<br>
-	We pick upold couches for upholstery as well<br></p>
-	
+  <script>
+    new Swiper(".mySwiper", {
+      loop: true,
+      effect: 'fade',
+      autoplay: { delay: 5000 },
+      pagination: { el: ".swiper-pagination", clickable: true },
+    });
+  </script>
 </body>
 </html>
