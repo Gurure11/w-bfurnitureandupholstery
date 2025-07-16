@@ -1,116 +1,362 @@
-Copy
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Quantum Digitech Solutions - Computer & Electronics Experts in Vereeniging">
+  <meta name="description" content="Quantum Digitech Solutions - Computer & Electronics Experts in Vereeniging. We specialize in computer repairs, software installation, TV and cellphone repairs, accessories, smart TVs, gaming PCs, and more.">
+  <meta name="keywords" content="Quantum Digitech, Computer Repairs Vereeniging, TV Repairs, Laptop Repairs, Gaming Computers, Electronics Supplier, Website Development, CCTV Installation">
+  <meta name="author" content="Quantum Digitech Solutions Pty">
   <title>Quantum Digitech Solutions Pty</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <style>
-    .swiper { width: 100%; height: 70vh; max-height: 800px; }
-    .swiper-slide {
-      position: relative;
-      background: linear-gradient(45deg, rgba(0,0,0,0.7), rgba(0,0,0,0.3));
+    /* Custom styles for Swiper */
+    .swiper {
+      width: 100%;
+      height: 600px; /* Increased height for a more impactful hero section */
     }
-    .swiper-slide img { 
+    .swiper-slide img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      mix-blend-mode: multiply;
     }
-    .service-card {
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    .swiper-slide {
+      position: relative;
     }
-    .service-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    .swiper-slide-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    .swiper-slide-overlay h2 {
+      font-size: 3rem; /* Larger heading */
+      font-weight: bold;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    }
+    .swiper-slide-overlay p {
+      font-size: 1.5rem; /* Larger text */
+      margin-bottom: 2rem;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    }
+    /* Smooth scroll for anchor links */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Mobile Menu Specific Styles */
+    @media (max-width: 767px) { /* Adjust breakpoint as needed, Tailwind's 'md' is 768px */
+      .nav-links {
+        display: none; /* Hide desktop menu by default on mobile */
+        flex-direction: column;
+        width: 100%;
+        background-color: #0b225a; /* Dark blue background */
+        position: absolute;
+        top: 64px; /* Height of the fixed nav bar */
+        left: 0;
+        padding: 1rem 0;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      }
+      .nav-links.active {
+        display: flex; /* Show menu when active */
+      }
+      .nav-links li {
+        text-align: center;
+        margin: 0.5rem 0;
+      }
+      .nav-links a {
+        display: block;
+        padding: 0.75rem 0;
+        color: white;
+        font-size: 1.125rem; /* text-lg */
+      }
+      .hamburger-button {
+        display: block; /* Show hamburger icon on mobile */
+      }
+    }
+    @media (min-width: 768px) {
+      .nav-links {
+        display: flex !important; /* Always show desktop menu on larger screens */
+      }
+      .hamburger-button {
+        display: none; /* Hide hamburger icon on desktop */
+      }
     }
   </style>
 </head>
-<body class="bg-gray-50 text-gray-900">
-  <!-- Gradient Navigation -->
-  <nav class="bg-gradient-to-r from-blue-800 to-blue-900 text-white sticky top-0 z-50 shadow-xl">
-    <div class="container mx-auto px-4 py-3 flex flex-col md:flex-row justify-between items-center">
-      <h1 class="text-2xl font-bold mb-2 md:mb-0">Quantum Digitech</h1>
-      <ul class="flex space-x-6 font-medium">
-        <li><a href="#home" class="hover:text-yellow-400 transition-colors">Home</a></li>
-        <li><a href="#services" class="hover:text-yellow-400 transition-colors">Services</a></li>
-        <li><a href="#about" class="hover:text-yellow-400 transition-colors">About</a></li>
-        <li><a href="#contact" class="hover:text-yellow-400 transition-colors">Contact</a></li>
-      </ul>
+<body class="bg-gray-50 text-gray-900 font-sans">
+
+  <nav class="bg-blue-900 text-white shadow-lg p-4 flex justify-between items-center fixed w-full z-50 top-0">
+    <div class="flex items-center">
+      <img src="https://via.placeholder.com/40x40?text=Logo" alt="Quantum Digitech Solutions Logo" class="h-10 w-10 mr-3 rounded-full border-2 border-yellow-400">
+      <h1 class="text-2xl font-extrabold tracking-wide">Quantum Digitech Solutions</h1>
     </div>
+
+    <button id="hamburger" class="hamburger-button text-white text-2xl focus:outline-none">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <ul id="nav-links" class="nav-links space-x-6 text-lg font-medium md:flex">
+      <li><a href="#home" class="hover:text-yellow-400 transition duration-300">Home</a></li>
+      <li><a href="#about" class="hover:text-yellow-400 transition duration-300">About</a></li>
+      <li><a href="#services" class="hover:text-yellow-400 transition duration-300">Services</a></li>
+      <li><a href="#contact" class="hover:text-yellow-400 transition duration-300">Contact</a></li>
+    </ul>
   </nav>
 
-  <!-- Hero Section -->
-  <section id="home" class="relative">
+  <section id="home" class="pt-20">
     <div class="swiper mySwiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
-          <img src="images/q6.jpg" alt="Tech Solutions">
-          <div class="absolute bottom-10 left-10 text-white max-w-2xl">
-            <h2 class="text-4xl font-bold mb-4">Premium Tech Solutions</h2>
-            <p class="text-xl">Your trusted partner in digital innovation and electronics repair</p>
+          <img src="images/q6.jpg" alt="Cutting-edge Technology Solutions">
+          <div class="swiper-slide-overlay">
+            <h2>Your Premier Tech Partner</h2>
+            <p>Unlocking innovation, one solution at a time.</p>
+            <a href="#services" class="bg-yellow-500 text-blue-900 px-8 py-3 rounded-full text-xl font-semibold hover:bg-yellow-400 transition duration-300 transform hover:scale-105">Explore Services</a>
           </div>
         </div>
-        <!-- Add other slides with similar structure -->
+        <div class="swiper-slide">
+          <img src="images/q16.jpeg" alt="Expert Computer and Electronics Repairs">
+          <div class="swiper-slide-overlay">
+            <h2>Reliable Repairs, Exceptional Service</h2>
+            <p>Bringing your devices back to life with expertise.</p>
+            <a href="#contact" class="bg-yellow-500 text-blue-900 px-8 py-3 rounded-full text-xl font-semibold hover:bg-yellow-400 transition duration-300 transform hover:scale-105">Get a Quote</a>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <img src="images/q10.jpeg" alt="Custom Gaming PCs and IT Solutions">
+          <div class="swiper-slide-overlay">
+            <h2>Powering Your Digital World</h2>
+            <p>From custom builds to seamless IT solutions.</p>
+            <a href="#services" class="bg-yellow-500 text-blue-900 px-8 py-3 rounded-full text-xl font-semibold hover:bg-yellow-400 transition duration-300 transform hover:scale-105">Discover More</a>
+          </div>
+        </div>
       </div>
       <div class="swiper-pagination"></div>
     </div>
   </section>
 
-  <!-- Services Grid -->
-  <section id="services" class="py-16 px-4">
-    <div class="max-w-7xl mx-auto">
-      <h2 class="text-4xl font-bold text-center mb-12">Our Services</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Service Card 1 -->
-        <div class="service-card bg-white rounded-xl overflow-hidden shadow-lg">
-          <div class="aspect-square">
-            <img src="images/q4.jpg" alt="Repairs" class="w-full h-full object-cover">
+  <hr class="my-10 border-gray-200">
+
+  <section id="about" class="py-16 bg-gradient-to-r from-blue-900 to-blue-700 text-white">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+      <h2 class="text-4xl font-extrabold mb-6">About Quantum Digitech Solutions</h2>
+      <p class="text-xl leading-relaxed">
+        <strong>Quantum Digitech Solutions Pty</strong>, proudly based in Vereeniging, stands at the forefront of the computer and electronics technology sector with over <strong>15 years of dedicated experience</strong>. We are committed to delivering top-tier services, specializing in comprehensive computer and laptop repairs, efficient TV and cellphone repairs, and expert hardware and software installations.
+      </p>
+      <p class="text-xl leading-relaxed mt-4">
+        Our passion for innovation extends to supplying cutting-edge Smart TVs and electronic household items, crafting high-performance custom gaming computers, pioneering website development, and ensuring your security with reliable CCTV installations. At Quantum Digitech, your complete tech solutions are found conveniently under one roof, backed by unparalleled expertise and customer satisfaction.
+      </p>
+    </div>
+  </section>
+
+  <hr class="my-10 border-gray-200">
+
+  <section id="services" class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-4xl font-extrabold text-center mb-12 text-blue-900">Our Comprehensive Services</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 service-grid">
+
+        <div class="bg-white rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 flex flex-col overflow-hidden">
+          <img src="images/q4.jpg" alt="Computer and Laptop Repairs" class="w-full h-48 object-cover object-center rounded-t-lg">
+          <div class="p-6 flex-grow">
+            <h3 class="text-2xl font-bold mb-3 text-blue-800">Computer & Laptop Repairs</h3>
+            <p class="text-gray-700 leading-relaxed">Expert computer and laptop repairs to keep your devices running efficiently and reliably.</p>
           </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold mb-2">Device Repairs</h3>
-            <p class="text-gray-600">Expert repairs for computers, laptops, and mobile devices</p>
+          <div class="p-6 border-t border-gray-100 bg-gray-50">
+            <a href="#contact" class="text-blue-600 hover:text-blue-800 font-semibold flex items-center justify-end">
+              Learn More <i class="fas fa-arrow-right ml-2"></i>
+            </a>
           </div>
         </div>
 
-        <!-- Repeat for other services with consistent structure -->
-        <!-- Add 7 more service cards following the same pattern -->
-        
+        <div class="bg-white rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 flex flex-col overflow-hidden">
+          <img src="images/q14.jpeg" alt="Software and Hardware Installations" class="w-full h-48 object-cover object-center rounded-t-lg">
+          <div class="p-6 flex-grow">
+            <h3 class="text-2xl font-bold mb-3 text-blue-800">Software & Hardware Installations</h3>
+            <p class="text-gray-700 leading-relaxed">Professional hardware and software installations tailored to your specific needs for optimal performance.</p>
+          </div>
+          <div class="p-6 border-t border-gray-100 bg-gray-50">
+            <a href="#contact" class="text-blue-600 hover:text-blue-800 font-semibold flex items-center justify-end">
+              Learn More <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 flex flex-col overflow-hidden">
+          <img src="images/q12.jpeg" alt="TV and Cellphone Repairs" class="w-full h-48 object-cover object-center rounded-t-lg">
+          <div class="p-6 flex-grow">
+            <h3 class="text-2xl font-bold mb-3 text-blue-800">TV & Cellphone Repairs</h3>
+            <p class="text-gray-700 leading-relaxed">Fast and efficient repairs for TVs and smartphones of all makes and models, restoring their functionality.</p>
+          </div>
+          <div class="p-6 border-t border-gray-100 bg-gray-50">
+            <a href="#contact" class="text-blue-600 hover:text-blue-800 font-semibold flex items-center justify-end">
+              Learn More <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 flex flex-col overflow-hidden">
+          <img src="images/q16.jpeg" alt="Smart TVs and Electronic Household Items" class="w-full h-48 object-cover object-center rounded-t-lg">
+          <div class="p-6 flex-grow">
+            <h3 class="text-2xl font-bold mb-3 text-blue-800">Smart TV & Electronics Supply</h3>
+            <p class="text-gray-700 leading-relaxed">We supply a wide range of Smart TVs and quality household electronics at unbeatable prices.</p>
+          </div>
+          <div class="p-6 border-t border-gray-100 bg-gray-50">
+            <a href="#contact" class="text-blue-600 hover:text-blue-800 font-semibold flex items-center justify-end">
+              Learn More <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 flex flex-col overflow-hidden">
+          <img src="images/web2.jpeg" alt="Custom Gaming PCs" class="w-full h-48 object-cover object-center rounded-t-lg">
+          <div class="p-6 flex-grow">
+            <h3 class="text-2xl font-bold mb-3 text-blue-800">Custom Gaming PCs</h3>
+            <p class="text-gray-700 leading-relaxed">Experience ultimate performance with our custom-built gaming computers, designed for enthusiasts.</p>
+          </div>
+          <div class="p-6 border-t border-gray-100 bg-gray-50">
+            <a href="#contact" class="text-blue-600 hover:text-blue-800 font-semibold flex items-center justify-end">
+              Learn More <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 flex flex-col overflow-hidden">
+          <img src="images/q14.jpeg" alt="Cellphone and Computer Accessories" class="w-full h-48 object-cover object-center rounded-t-lg">
+          <div class="p-6 flex-grow">
+            <h3 class="text-2xl font-bold mb-3 text-blue-800">Cellphone & Computer Accessories</h3>
+            <p class="text-gray-700 leading-relaxed">We stock a wide variety of high-quality cellphone and computer accessories for all your digital needs.</p>
+          </div>
+          <div class="p-6 border-t border-gray-100 bg-gray-50">
+            <a href="#contact" class="text-blue-600 hover:text-blue-800 font-semibold flex items-center justify-end">
+              Learn More <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 flex flex-col overflow-hidden">
+          <img src="images/cctv.webp" alt="CCTV Installation" class="w-full h-48 object-cover object-center rounded-t-lg">
+          <div class="p-6 flex-grow">
+            <h3 class="text-2xl font-bold mb-3 text-blue-800">CCTV Installation</h3>
+            <p class="text-gray-700 leading-relaxed">Ensure the security of your property 24/7 with our reliable and professional CCTV installation services.</p>
+          </div>
+          <div class="p-6 border-t border-gray-100 bg-gray-50">
+            <a href="#contact" class="text-blue-600 hover:text-blue-800 font-semibold flex items-center justify-end">
+              Learn More <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 flex flex-col overflow-hidden">
+          <img src="images/web2.jpeg" alt="Website Development" class="w-full h-48 object-cover object-center rounded-t-lg">
+          <div class="p-6 flex-grow">
+            <h3 class="text-2xl font-bold mb-3 text-blue-800">Website Development</h3>
+            <p class="text-gray-700 leading-relaxed">Boost your digital presence with our professional website design and development solutions.</p>
+          </div>
+          <div class="p-6 border-t border-gray-100 bg-gray-50">
+            <a href="#contact" class="text-blue-600 hover:text-blue-800 font-semibold flex items-center justify-end">
+              Learn More <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="py-16 bg-blue-900 text-white">
-    <div class="max-w-4xl mx-auto px-4 text-center">
-      <h2 class="text-4xl font-bold mb-8">Get in Touch</h2>
-      <div class="grid md:grid-cols-2 gap-8 text-left">
-        <div>
-          <p class="text-xl mb-4">📍 28 Kruger Avenue, Vereeniging</p>
-          <p class="text-xl mb-4">📞 <a href="tel:+27786809808" class="hover:text-yellow-400">078 680 9808</a></p>
-          <p class="text-xl">📧 <a href="mailto:quantumdigitech@gmail.com" class="hover:text-yellow-400">quantumdigitech@gmail.com</a></p>
-        </div>
-        <div class="flex justify-center items-center gap-6">
-          <a href="https://wa.me/27786809808" class="text-4xl hover:text-yellow-400 transition-colors">
-            <i class="fab fa-whatsapp"></i>
-          </a>
-          <!-- Add other social links -->
-        </div>
+  <hr class="my-10 border-gray-200">
+
+  <section id="contact" class="py-16 bg-gradient-to-r from-blue-700 to-blue-900 text-white">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h2 class="text-4xl font-extrabold mb-8">Get In Touch With Us</h2>
+      <p class="text-xl mb-6">Have a question or need assistance? Reach out to our expert team!</p>
+
+      <div class="bg-white text-gray-900 p-8 rounded-lg shadow-xl mb-8">
+        <p class="text-lg mb-4 flex items-center justify-center">
+          <i class="fas fa-map-marker-alt text-blue-600 mr-3 text-2xl"></i>
+          <span class="font-semibold">Visit Us:</span> 28 Kruger Avenue, Vereeniging
+        </p>
+        <p class="text-lg mb-4 flex items-center justify-center">
+          <i class="fas fa-phone-alt text-blue-600 mr-3 text-2xl"></i>
+          <span class="font-semibold">Call / WhatsApp:</span> <a href="tel:+27786809808" class="text-blue-800 hover:underline">078 680 9808</a>
+        </p>
+        <p class="text-lg mb-4 flex items-center justify-center">
+          <i class="fas fa-envelope text-blue-600 mr-3 text-2xl"></i>
+          <span class="font-semibold">Email Us:</span> <a href="mailto:quantumdigitech@gmail.com" class="text-blue-800 hover:underline">quantumdigitech@gmail.com</a>
+        </p>
+      </div>
+
+      <h3 class="text-3xl font-bold mb-6">Connect With Us On Social Media</h3>
+      <div class="flex justify-center gap-8 mt-6">
+        <a href="https://facebook.com" target="_blank" class="text-white hover:text-yellow-400 transition transform hover:scale-110 text-4xl" aria-label="Facebook">
+          <i class="fab fa-facebook-square"></i>
+        </a>
+        <a href="https://wa.me/27786809808" target="_blank" class="text-white hover:text-yellow-400 transition transform hover:scale-110 text-4xl" aria-label="WhatsApp">
+          <i class="fab fa-whatsapp-square"></i>
+        </a>
+        <a href="https://instagram.com" target="_blank" class="text-white hover:text-yellow-400 transition transform hover:scale-110 text-4xl" aria-label="Instagram">
+          <i class="fab fa-instagram-square"></i>
+        </a>
       </div>
     </div>
   </section>
+
+  <hr class="my-10 border-gray-200">
+
+  <footer class="bg-blue-900 text-white text-center py-8">
+    <p class="text-lg">&copy; <span id="current-year"></span> Quantum Digitech Solutions Pty. All rights reserved.</p>
+    <p class="text-sm mt-2">Designed with passion by Quantum Digitech Solutions.</p>
+  </footer>
 
   <script>
+    // Initialize Swiper
     new Swiper(".mySwiper", {
       loop: true,
-      effect: 'fade',
-      autoplay: { delay: 5000 },
-      pagination: { el: ".swiper-pagination", clickable: true },
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      effect: "fade", // Added fade effect for smoother transitions
+      fadeEffect: {
+        crossFade: true,
+      },
+    });
+
+    // Set current year in footer
+    document.getElementById("current-year").textContent = new Date().getFullYear();
+
+    // Mobile menu toggle functionality
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+
+    // Close menu when a link is clicked (for smoother navigation on mobile)
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (navLinks.classList.contains('active')) {
+          navLinks.classList.remove('active');
+        }
+      });
     });
   </script>
 </body>
